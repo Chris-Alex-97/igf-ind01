@@ -3,15 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Formulario</title>
 </head>
 <body>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="tabla.html">Tabla</a></li>
-        <li><a href="formulario.html">Formulario</a></li>
-    </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"><i class="fas-laptop-code"></i>IGF/PRN</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <h2>Formulario</h2>
+        <div class="collapse navbar-collapse"
+            id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tabla.html">Tabla</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="formulario.html">Formulario</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Formulario</h1>
+        <small class="text-danger">* Obligatorio</small>
+        
+        <form id="formEstudiante" action="" method="GET">
+            <div class="form-row">
+                
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre: <span
+                        class="text-danger">*</span></label>
+                    <input type="text" class="form-control"
+                    placeholder="Nombre" id="nombre" name="nombre">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido: <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control"
+                    placeholder="Apellido" id="apellido" name="apellido">
+                </div> 
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="carrera">Carrera: <span class="text-danger">*</span></label><br>
+                    <select class="form-control" name="carrera" id="carrera">
+                        <option value="" disabled selected>
+                            Seleccione una carrera
+                        </option>
+                        <option value="ingSistemas">
+                            Ing. Sistemas Informáticos
+                        </option>
+                        <option value="ingIndustrial">
+                            Ing. Industrial
+                        </option>
+                        <option value="ingElectrica">
+                            Ing. Eléctrica
+                        </option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="sexo">Sexo: <span class="text-danger">*</span></label>
+                    
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="M" name="sexo" value="M" checked>
+                            <label class="form-check-label" for="M">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="F" name="sexo"
+                            value="F">
+                            <label class="form-check-label" for="F">
+                                Femenino
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="float-right">
+                <button id="btnLimpiar" class=" btn btn-outline-dark" type="button">
+                    Limpiar
+                </button>
+                <button class="btn btn-dark" type="submit">
+                    Enviar
+                </button>
+            </div>
+        </form>
+    </div>
+
+     <!--Se suele poner archivos de javascript-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/formulario.js"></script>
 </body>
 </html>
