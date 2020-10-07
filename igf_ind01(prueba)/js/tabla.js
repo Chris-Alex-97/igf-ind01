@@ -7,7 +7,7 @@ $(document).ready(function(){
         $(this).closest('tr').hide();
     });
 
-    $('#btnNuevoReistro').on('click',function(){
+    $('#btnNuevoRegistro').on('click',function(){
         location.href=$(this).attr('data-url-formulario');
     });
 });
